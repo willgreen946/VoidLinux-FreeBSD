@@ -1,0 +1,9 @@
+" Editor to neovim
+set vicmd=vim
+" Colorscheme
+colorscheme wrt
+" View pane
+view
+" Normal mode commands
+:normal zo <c-c>
+
