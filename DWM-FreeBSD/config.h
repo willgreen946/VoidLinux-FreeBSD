@@ -70,6 +70,7 @@ static const char *network[]  = { "wifimgr", NULL };
 static const char *filemanager[] = { "st", "vifm", NULL };
 static const char *htop[] = { "st", "htop", NULL };
 static const char *vim[] = { "st", "vim", NULL };
+static const char *audio[] = { "mixertui", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -80,6 +81,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_f,	   spawn,	   {.v = filemanager } },
 	{ MODKEY,			XK_m,	   spawn,	   {.v = htop } },
 	{ MODKEY,			XK_v,	   spawn,	   {.v = vim } },
+	{ MODKEY,			XK_o,	   spawn,	   {.v = audio } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
