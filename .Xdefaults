@@ -1,0 +1,4 @@
+xterm*background: #000000 
+xterm*foreground: #ffffff 
+xterm*font: 9x15
+xterm*font: Ubuntu Mono 
