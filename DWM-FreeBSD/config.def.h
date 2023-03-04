@@ -70,7 +70,7 @@ static const char *network[]  = { "wifimgr", NULL };
 static const char *filemanager[] = { "st", "vifm", NULL };
 static const char *htop[] = { "st", "htop", NULL };
 static const char *vim[] = { "st", "vim", NULL };
-static const char *audio[] = { "mixertui", NULL };
+static const char *audio[] = { "st", "mixertui", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
