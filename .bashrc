@@ -39,6 +39,6 @@ alias n='lynx --vikeys www.searx.org'
 # set prompt: ``username@hostname:directory $ '' 
 #PS1="\u@\h:\w \\$ "
 #export PS1="[\u@\H]\n\@ \w >> \[$(tput sgr0)\]"
-export PS1="\[\033[31m\][\[\033[33m\]\u@\H\[\033[31m\]]\[\033[31m\]\n\@ \w >> \[\033[37m\]\[$(tput sgr0)\]"
+export PS1="\[\033[33m\][\[\033[33m\]\u@\H\[\033[33m\]]\[\033[33m\]\n\@ \w >> \[\033[33m\]\[$(tput sgr0)\]"
 # search path for cd(1)
 # CDPATH=:$HOME
