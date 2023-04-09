@@ -2,22 +2,22 @@ highlight clear
 
 highlight Win             cterm=none ctermfg=white    ctermbg=black
 
-highlight TopLine         cterm=none ctermfg=red         ctermbg=red
-highlight TopLineSel      cterm=none ctermfg=red         ctermbg=red
-highlight StatusLine      cterm=none ctermfg=red         ctermbg=red
-highlight Border          cterm=none ctermfg=black         ctermbg=black
+highlight TopLine         cterm=none ctermfg=black     ctermbg=yellow
+highlight TopLineSel      cterm=none ctermfg=black     ctermbg=yellow
+highlight StatusLine      cterm=none ctermfg=black     ctermbg=yellow
+highlight Border          cterm=none ctermfg=black     ctermbg=yellow
 
-highlight Selected        cterm=bold ctermfg=yellow    ctermbg=default
-highlight CurrLine        cterm=bold ctermfg=black    ctermbg=red
+highlight Selected        cterm=bold ctermfg=yellow    ctermbg=black
+highlight CurrLine        cterm=bold ctermfg=black     ctermbg=yellow
 
 highlight WildMenu        cterm=underline,reverse ctermfg=white ctermbg=black
-highlight CmdLine         cterm=none ctermfg=white ctermbg=black
-highlight ErrorMsg        cterm=none ctermfg=blue ctermbg=black
+highlight CmdLine         cterm=none ctermfg=white   ctermbg=black
+highlight ErrorMsg        cterm=none ctermfg=black ctermbg=red
 
-highlight Directory       cterm=none ctermfg=red ctermbg=default
-highlight Link            cterm=none ctermfg=yellow ctermbg=default
-highlight BrokenLink      cterm=none ctermfg=blue ctermbg=default
-highlight Socket          cterm=none ctermfg=yellow ctermbg=default
-highlight Device          cterm=none ctermfg=yellow ctermbg=default
-highlight Fifo            cterm=none ctermfg=yellow ctermbg=default
-highlight Executable      cterm=none ctermfg=blue ctermbg=default
+highlight Directory       cterm=none ctermfg=white  ctermbg=default
+highlight Link            cterm=none ctermfg=black  ctermbg=cyan
+highlight BrokenLink      cterm=none ctermfg=black  ctermbg=red
+highlight Socket          cterm=none ctermfg=cyan   ctermbg=default
+highlight Device          cterm=none ctermfg=cyan   ctermbg=default
+highlight Fifo            cterm=none ctermfg=cyan   ctermbg=default
+highlight Executable      cterm=none ctermfg=black  ctermbg=green
