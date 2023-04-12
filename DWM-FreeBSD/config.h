@@ -65,23 +65,25 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *browser[]  = { "vimb", "searx.org", NULL };
+static const char *browser[]  = { "vimb", "https://searx.org", NULL };
 static const char *network[]  = { "wifimgr", NULL };
 static const char *filemanager[] = { "st", "vifm", NULL };
 static const char *htop[] = { "st", "htop", NULL };
 static const char *vim[] = { "st", "vim", NULL };
 static const char *audio[] = { "st", "mixertui", NULL };
+static const char *surf[] = { "ungoogled-chromium", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_s,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_space,  spawn,          {.v = termcmd } },
 	{ MODKEY,			XK_b,	   spawn,	   {.v = browser } },
-	{ MODKEY,			XK_w,	   spawn,	   {.v = network } },
+	{ MODKEY,			XK_n,	   spawn,	   {.v = network } },
 	{ MODKEY,			XK_f,	   spawn,	   {.v = filemanager } },
 	{ MODKEY,			XK_m,	   spawn,	   {.v = htop } },
 	{ MODKEY,			XK_v,	   spawn,	   {.v = vim } },
 	{ MODKEY,			XK_o,	   spawn,	   {.v = audio } },
+	{ MODKEY,			XK_w,	   spawn,	   {.v = surf } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
