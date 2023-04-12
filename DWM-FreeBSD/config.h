@@ -9,11 +9,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = {"Ubuntu Mono:size=10" };
 static const char dmenufont[]       = "Ubuntu Mono:size=10";
-static const char col_gray1[]       = "#1E7D32";
-static const char col_gray2[]       = "#1E7D32";
-static const char col_gray3[]       = "#E6F2DE";
-static const char col_gray4[]       = "#1E7D32";
-static const char col_cyan[]        = "#F6D107";
+static const char col_gray1[]       = "#000000";
+static const char col_gray2[]       = "#000000";
+static const char col_gray3[]       = "#ffffff";
+static const char col_gray4[]       = "#000000";
+static const char col_cyan[]        = "#ff0000";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
