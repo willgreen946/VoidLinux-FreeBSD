@@ -7,13 +7,14 @@ static const unsigned int gappx     = 5;       /* default gap between windows in
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = {"Ubuntu Mono:size=10" };
+static const char *fonts[]          = {"Ubuntu Mono:size=10", "Font Awesome 6 Free-Solid:size=11", 
+					"Font Awesome 6 Free-Regular:size=11" "Font Awesome 6 Brands-Regular:size=11", "Font Awesome:size=11", };
 static const char dmenufont[]       = "Ubuntu Mono:size=10";
 static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#000000";
-static const char col_gray3[]       = "#ffffff";
+static const char col_gray3[]       = "#8C8C8C";
 static const char col_gray4[]       = "#000000";
-static const char col_cyan[]        = "#ff0000";
+static const char col_cyan[]        = "#AB2B28";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -21,7 +22,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3"};
+static const char *tags[] = { "Home", "Terminal", "Documents", "Internet"};
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -29,8 +30,8 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "ungoogled-chromium",  NULL,       NULL,       1 << 1,       True,           1 },
+	{ "wifimgr",	NULL,	 NULL,	      1 << 3,	          True,           1 },
 };
 
 /* layout(s) */
