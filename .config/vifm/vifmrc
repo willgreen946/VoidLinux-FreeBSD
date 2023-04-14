@@ -7,4 +7,5 @@ view
 " Normal mode commands
 :normal zo <c-c>
 
+only
 source /home/will/.config/vifm/favicons.vifm
