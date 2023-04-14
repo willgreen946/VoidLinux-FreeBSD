@@ -9,12 +9,12 @@ static const char *fonts[]          = { "Ubuntu Mono:size=10" };
 static const char dmenufont[]       = "Ubuntu Mono:size=10";
 static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#000000";
-static const char col_gray3[]       = "#8c8c8c";
-static const char col_gray4[]       = "#000000";
-static const char col_cyan[]        = "#ab2b28";
+static const char col_gray3[]       = "#ffffff";
+static const char col_gray4[]       = "#ffffff";
+static const char col_cyan[]        = "#800000";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
+	[SchemeNorm] = { col_gray3, col_gray1, col_gray1 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
 
