@@ -7,8 +7,7 @@ static const unsigned int gappx     = 5;       /* default gap between windows in
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = {"Ubuntu Mono:size=10", /*"Font Awesome 6 Free-Solid:size=11", 
-					"Font Awesome 6 Free-Regular:size=11" "Font Awesome 6 Brands-Regular:size=11", "Font Awesome:size=11",*/ };
+static const char *fonts[]          = {"Ubuntu Mono:size=10", "Font Awesome 6:size=14",};
 static const char dmenufont[]       = "Ubuntu Mono:size=10";
 static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#000000";
@@ -22,7 +21,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "Home ", "Terminal  ", "Documents ", "Internet "};
+static const char *tags[] = { "", " ","", "",};
 
 static const Rule rules[] = {
 	/* xprop(1):
