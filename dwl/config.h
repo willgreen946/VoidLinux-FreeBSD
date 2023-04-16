@@ -108,12 +108,14 @@ static const char *menucmd[] = { "bemenu-run", NULL };
 static const char *htop[]    = { "foot", "htop", NULL };
 static const char *vifm[]    = { "foot", "vifm", NULL }; 
 static const char *wifi[]    = { "foot", "chrome", NULL };
+static const char *browser[] = { "ungoogled-chromium", "--ozone-platform=wayland", NULL };
 
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
 	/* modifier                  key                 function        argument */
 	{ MODKEY,                    XKB_KEY_s,          spawn,          {.v = menucmd} },
 	{ MODKEY,                    XKB_KEY_space,      spawn,          {.v = termcmd} },
+	{ MODKEY,		     XKB_KEY_b,		 spawn,		 {.v = browser} },
 	{ MODKEY,		     XKB_KEY_m,		 spawn,		 {.v = htop } },
 	{ MODKEY,		     XKB_KEY_f,		 spawn,		 {.v = vifm } },
 	{ MODKEY,		     XKB_KEY_w,		 spawn,		 {.v = wifi } }, 
