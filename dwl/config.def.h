@@ -103,10 +103,11 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *termcmd[] = { "alacritty", NULL };
+static const char *termcmd[] = { "foot", NULL };
 static const char *menucmd[] = { "bemenu-run", NULL };
-static const char *htop[]    = { "alacritty", "htop", NULL };
-static const char *vifm[]    = { "alacritty", "vifm", NULL }; 
+static const char *htop[]    = { "foot", "htop", NULL };
+static const char *vifm[]    = { "foot", "vifm", NULL }; 
+static const char *wifi[]    = { "foot", "chrome", NULL };
 
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
@@ -115,6 +116,7 @@ static const Key keys[] = {
 	{ MODKEY,                    XKB_KEY_space,      spawn,          {.v = termcmd} },
 	{ MODKEY,		     XKB_KEY_m,		 spawn,		 {.v = htop } },
 	{ MODKEY,		     XKB_KEY_f,		 spawn,		 {.v = vifm } },
+	{ MODKEY,		     XKB_KEY_w,		 spawn,		 {.v = wifi } }, 
 	{ MODKEY,                    XKB_KEY_j,          focusstack,     {.i = +1} },
 	{ MODKEY,                    XKB_KEY_k,          focusstack,     {.i = -1} },
 	{ MODKEY,                    XKB_KEY_i,          incnmaster,     {.i = +1} },
