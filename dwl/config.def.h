@@ -108,12 +108,15 @@ static const char *menucmd[] = { "bemenu-run", NULL };
 static const char *htop[]    = { "foot", "htop", NULL };
 static const char *vifm[]    = { "foot", "vifm", NULL }; 
 static const char *wifi[]    = { "foot", "chrome", NULL };
+static const char *browser[] = { "ungoogled-chromium", "--ozone-platform=wayland", NULL };
+static const char *wallpaper[] = { "swaybg", "-i", "Pictures/fbsd.jpg", NULL };
 
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
 	/* modifier                  key                 function        argument */
 	{ MODKEY,                    XKB_KEY_s,          spawn,          {.v = menucmd} },
 	{ MODKEY,                    XKB_KEY_space,      spawn,          {.v = termcmd} },
+	{ MODKEY,		     XKB_KEY_b,		 spawn,		 {.v = browser} },
 	{ MODKEY,		     XKB_KEY_m,		 spawn,		 {.v = htop } },
 	{ MODKEY,		     XKB_KEY_f,		 spawn,		 {.v = vifm } },
 	{ MODKEY,		     XKB_KEY_w,		 spawn,		 {.v = wifi } }, 
@@ -125,9 +128,10 @@ static const Key keys[] = {
 	{ MODKEY,                    XKB_KEY_l,          setmfact,       {.f = +0.05} },
 	{ MODKEY,                    XKB_KEY_Return,     zoom,           {0} },
 	{ MODKEY,                    XKB_KEY_Tab,        view,           {0} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_W,		 spawn,		 {.v = wallpaper } },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_K,          killclient,     {0} },
-	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_t,          setlayout,      {.v = &layouts[0]} },
-	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_f,          setlayout,      {.v = &layouts[1]} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_T,          setlayout,      {.v = &layouts[0]} },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_F,          setlayout,      {.v = &layouts[1]} },
 	TAGKEYS(          XKB_KEY_1, XKB_KEY_exclam,                     0),
 	TAGKEYS(          XKB_KEY_2, XKB_KEY_at,                         1),
 	TAGKEYS(          XKB_KEY_3, XKB_KEY_numbersign,                 2),
