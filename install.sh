@@ -1,5 +1,5 @@
 # Installing all packages I use
-exec pkg install doas vim vifm lynx git neofetch scrot drm-kmod automake autoconf autotools font-awesome ungoogled-chromium bash zathura ubuntu-font audio/mixertui  x11-drivers/xf86-video-intel 
+exec pkg install doas vim vifm meson ninja lynx git neofetch scrot drm-kmod automake autoconf autotools font-awesome ungoogled-chromium bash zathura ubuntu-font audio/mixertui  x11-drivers/xf86-video-intel 
 
 # wayland packages
 exec pkg install wayland seatd 
