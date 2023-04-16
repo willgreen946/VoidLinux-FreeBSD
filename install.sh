@@ -2,7 +2,7 @@
 exec pkg install doas vim vifm meson ninja lynx git neofetch scrot drm-kmod automake autoconf autotools font-awesome ungoogled-chromium bash zathura ubuntu-font audio/mixertui  x11-drivers/xf86-video-intel 
 
 # wayland packages
-exec pkg install wayland seatd 
+exec pkg install wayland seatd foot
 
 # Run for wayland support
 exec sysrc seatd_enable=”YES”
