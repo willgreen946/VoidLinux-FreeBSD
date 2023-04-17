@@ -2,7 +2,7 @@
 static const int sloppyfocus               = 1;  /* focus follows mouse */
 static const int bypass_surface_visibility = 0;  /* 1 means idle inhibitors will disable idle tracking even if it's surface isn't visible  */
 static const unsigned int borderpx         = 1;  /* border pixel of windows */
-static const float bordercolor[]           = {0.5, 0.5, 0.5, 1.0};
+static const float bordercolor[]           = {0.0, 0.0, 0.0, 1.0};
 static const float focuscolor[]            = {1.0, 0.0, 0.0, 1.0};
 /* To conform the xdg-protocol, set the alpha to zero to restore the old behavior */
 static const float fullscreen_bg[]         = {0.1, 0.1, 0.1, 1.0};
@@ -49,8 +49,8 @@ static const int repeat_rate = 25;
 static const int repeat_delay = 600;
 
 /* Trackpad */
-static const int tap_to_click = 1;
-static const int tap_and_drag = 1;
+static const int tap_to_click = 0;
+static const int tap_and_drag = 0;
 static const int drag_lock = 1;
 static const int natural_scrolling = 0;
 static const int disable_while_typing = 1;
@@ -110,6 +110,7 @@ static const char *vifm[]    = { "foot", "vifm", NULL };
 static const char *wifi[]    = { "foot", "chrome", NULL };
 static const char *browser[] = { "ungoogled-chromium", "--ozone-platform=wayland", NULL };
 static const char *wallpaper[] = { "swaybg", "-i", "Pictures/fbsd.jpg", NULL };
+static const char *blocks[] = { "someblocks", NULL };
 
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
@@ -129,6 +130,7 @@ static const Key keys[] = {
 	{ MODKEY,                    XKB_KEY_Return,     zoom,           {0} },
 	{ MODKEY,                    XKB_KEY_Tab,        view,           {0} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_W,		 spawn,		 {.v = wallpaper } },
+	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_B,		 spawn,		 {.v = blocks } },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_K,          killclient,     {0} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_T,          setlayout,      {.v = &layouts[0]} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_M,          setlayout,      {.v = &layouts[2]} },
