@@ -1,5 +1,5 @@
 # Installing all packages I use
-exec pkg install doas vim vifm meson ninja lynx git neofetch scrot drm-kmod automake autoconf autotools font-awesome ungoogled-chromium bash zathura ubuntu-font audio/mixertui  x11-drivers/xf86-video-intel 
+exec pkg install doas vim vifm meson ninja lynx git neofetch scrot drm-kmod automake autoconf autotools font-awesome ungoogled-chromium bash zathura ubuntu-font audio/mixertui 
 
 # wayland packages
 exec pkg install wayland seatd foot swaybg
@@ -9,7 +9,7 @@ exec sysrc seatd_enable=”YES”
 exec service seatd start
 
 # x11 packages uncomment for x11
-# exec pkg install xorg wifimgr feh mpv picom
+# exec pkg install xorg wifimgr feh mpv picom  xf86-video-intel
 
 # This is for better intel graphics
 add kern.vty=vt to /boot/loader.conf
