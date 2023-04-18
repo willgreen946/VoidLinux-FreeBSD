@@ -111,6 +111,7 @@ static const char *wifi[]    = { "foot", "chrome", NULL };
 static const char *browser[] = { "ungoogled-chromium", "--ozone-platform=wayland", NULL };
 static const char *wallpaper[] = { "swaybg", "-i", "Pictures/fbsd.jpg", NULL };
 static const char *blocks[] = { "someblocks", NULL };
+static const char *audio[] = { "foot", "mixertui", NULL };
 
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
@@ -120,6 +121,7 @@ static const Key keys[] = {
 	{ MODKEY,		     XKB_KEY_b,		 spawn,		 {.v = browser} },
 	{ MODKEY,		     XKB_KEY_m,		 spawn,		 {.v = htop } },
 	{ MODKEY,		     XKB_KEY_f,		 spawn,		 {.v = vifm } },
+	{ MODKEY,		     XKB_KEY_a,		 spawn,		 {.v = audio } },
 	{ MODKEY,		     XKB_KEY_w,		 spawn,		 {.v = wifi } }, 
 	{ MODKEY,                    XKB_KEY_j,          focusstack,     {.i = +1} },
 	{ MODKEY,                    XKB_KEY_k,          focusstack,     {.i = -1} },
