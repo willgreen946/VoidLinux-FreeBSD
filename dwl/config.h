@@ -108,7 +108,7 @@ static const char *menucmd[] = { "bemenu-run", NULL };
 static const char *htop[]    = { "foot", "htop", NULL };
 static const char *vifm[]    = { "foot", "vifm", NULL }; 
 static const char *wifi[]    = { "foot", "chrome", NULL };
-static const char *browser[] = { "ungoogled-chromium", "--ozone-platform=wayland", NULL };
+static const char *browser[] = { "librewolf", NULL };
 static const char *wallpaper[] = { "swaybg", "-i", "Pictures/fbsd.jpg", NULL };
 static const char *blocks[] = { "someblocks", NULL };
 static const char *audio[] = { "foot", "mixertui", NULL };
