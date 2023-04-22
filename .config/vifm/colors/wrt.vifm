@@ -1,6 +1,6 @@
 highlight clear
 
-highlight Win             cterm=none ctermfg=white    ctermbg=black
+highlight Win             cterm=none ctermfg=white    ctermbg=none
 
 highlight TopLine         cterm=none ctermfg=black     ctermbg=red
 highlight TopLineSel      cterm=none ctermfg=black     ctermbg=red
