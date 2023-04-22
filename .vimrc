@@ -1,5 +1,6 @@
 source /home/will/.vim/colors/gruvbox.vim
 set bg=dark
+let g:gruvbox_contrast_dark = hard
 syntax on
 set number
 set cursorline!
