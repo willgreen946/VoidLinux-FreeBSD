@@ -1,1 +1,0 @@
-{"targets": {"/usr/home/will/dwl/somebar/build/somebar": {"destination": "{bindir}/somebar", "tag": "runtime"}}, "man": {"/usr/home/will/dwl/somebar/somebar.1": {"destination": "{mandir}/man1/somebar.1", "tag": "man"}}}
