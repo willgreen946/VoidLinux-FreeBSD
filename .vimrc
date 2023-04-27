@@ -1,6 +1,6 @@
 source /home/will/.vim/colors/gruvbox.vim
 set bg=dark
-let g:gruvbox_contrast_dark = hard
+"let g:gruvbox_contrast_dark = hard
 syntax on
 set number
 set cursorline!
@@ -11,7 +11,6 @@ set cursorline!
 " hi CursorLine cterm=NONE ctermbg=240
 hi CursorColumn cterm=NONE ctermbg=240
 hi Directory ctermfg=green
-
 
 let g:airline#extensions#tabline#enabled = 1
 
@@ -28,11 +27,14 @@ let g:lightline = {
 nnoremap <C-e> <End> 
 inoremap <C-e> <End>
 " Ctrl+f to open vifm 
-map <C-f> :vifm <CR>
-map <C-v> :Vsplit Vifm <CR>
+"map <C-f> :vifm <CR>
+"map <C-v> :Vsplit Vifm <CR>
 
 " Nerdtree
+autocmd VimEnter * NERDTree
 map <C-n> :NERDTreeToggle <CR>
+map <C-j> :NERDTreeOpen<CR>
+nnoremap <C-f> :NERDTreeToggle<Enter>
 
 " Ctrl-a to make green line
 " Ctrl-z to make green vertical line
