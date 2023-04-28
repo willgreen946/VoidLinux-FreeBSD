@@ -24,7 +24,7 @@ static const char *tags[] = { "", "", "", "", "","",};
 
 #define TERMINAL "st"
 #define BROWSER "qutebrowser"
-#define AUDIOTUI "alsamixer"
+#define AUDIOYUI "alsamixer"
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -65,22 +65,22 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_space,  spawn,          {.v = (const char*[]) { TERMINAL, NULL } } },
-	{ MODKEY,			XK_f,	   spawn,          {.v = (const char*[]) { TERMINAL, "vifm", NULL } } },
-	{ MODKEY,			XK_m,	   spawn,	   {.v = (const char*[]) { TERMINAL, "htop", NULL } } },
-	{ MODKEY,			XK_a,	   spawn,	   {.v = (const char*[]) { TERMINAL, AUDIOTUI, NULL } } },
-	{ MODKEY,                       XK_b,      spawn,          {.v = (const char*[]) { BROWSER, "searx.org", NULL } } },
+	{ MODKEY,                       XK_space,  spawn,          {.v = (const char*[] { TERMINAL, NULL } } },
+	{ MODKEY,			XK_f,	   spawn,          {.v = (const char*[] { TERMINAL, "vifm", NULL } } },
+	{ MODKEY,			XK_m,	   spawn,	   {.v = (const char*[] { TERMINAL, "htop", NULL } } },
+	{ MODKEY,			XK_a,	   spawn,	   {.v = (const char*[] { TERMINAL, AUDIOTUI, NULL } } },
+	{ MODKEY,                       XK_b,      spawn,          {.v = (const char*[] { BROWSER, "searx.org", NULL } } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY|ShiftMask,             XK_space,  zoom,           {0} },
+	{ MODKEY|ShiftMask,             XK_space, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
-	{ MODKEY|ShiftMask,             XK_k,      killclient,     {0} },
-	{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY|ShiftMask,             XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY|ShiftMask,             XK_K,      killclient,     {0} },
+	{ MODKEY|ShiftMask,             XK_T,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY|ShiftMask,             XK_M,      setlayout,      {.v = &layouts[2]} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -97,7 +97,7 @@ static const Button buttons[] = {
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button2,        spawn,          {.v = (const char*[]) { TERMINAL, NULL } } },
+	{ ClkStatusText,        0,              Button2,        spawn,          {.v = const char*[]{ TERMINAL, NULL } } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
