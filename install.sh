@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# DO NOT USE YET THIS IS UNFINSHED
 # Personal Void Linux and FreeBSD post install configuration script by AfricanVoid
 # Run as root
 # Use at your own risk
