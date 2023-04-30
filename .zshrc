@@ -8,7 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="apple"
+# ZSH_THEME="apple"
+ZSH_THEME="gruvbox"
 
 PROMPT="%t"
 
@@ -108,4 +109,7 @@ alias vr="sudo xbps-remove"
 alias f="vifm"
 alias v="vim"
 alias i="apm -l && date"
-alias lsblk="doas camcamcontrol devlist"
+alias lsblk="doas camcontrol devlist"
+alias vim="nvim"
+alias vi="nvim"
+alias v="nvim"
