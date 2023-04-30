@@ -31,6 +31,19 @@ E1="${RED}Error${CLEAR}: Unknown OS ... "
 read -p "What is your username? " username
 read -p "Hi $username, what system are you installing for? [BSD/Void] " OS
 
+# Directory Setup
+mkdir /home/$username/Downloads 
+mkdir /home/$username/Documents 
+mkdir /home/$username/Pictures 
+mkdir /home/$username/Music 
+cp -r .vim /home/$username/.vim
+cp -r .config /home/$username/.config
+cp -r .fonts /home/$username/.fonts
+cp .xinitrc /home/$username/.xinitrc
+cp .zshrc /home/$username/.zshrc
+cp bat.sh /home/$username/bat.sh
+cp waystart.sh /home/$username/waystart.sh
+
 if [ "$OS" = "BSD" ]; then
 	printf "\nInstalling for a ${GREEN}FreeBSD${CLEAR} system ... "
 elif [ "$OS" = "Void" ]; then
