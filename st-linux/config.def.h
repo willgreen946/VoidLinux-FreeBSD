@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Ubuntu Mono:pixelsize=14:antialias=true:autohint=true";
+static char *font = "ubuntu:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -96,24 +96,24 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	"#282828",
+	"#fb4934",
+	"#b8bb26",
+	"#fabd2f",
+	"#83a598",
+	"#fe8019",
+	"#8ec07c",
+	"#edbbb2",
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	"#928374",
+	"#cc241d",
+	"#98971a",
+	"#d79921",
+	"#458588",
+	"#d65d0e",
+	"#689d6a",
+	"#a89984",
 
 	[255] = 0,
 
