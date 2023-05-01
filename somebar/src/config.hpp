@@ -4,7 +4,7 @@
 #pragma once
 #include "common.hpp"
 
-constexpr bool topbar = true;
+constexpr bool topbar = false;
 
 constexpr int paddingX = 8;
 constexpr int paddingY = 1;
