@@ -49,8 +49,8 @@ static const int repeat_rate = 25;
 static const int repeat_delay = 600;
 
 /* Trackpad */
-static const int tap_to_click = 1;
-static const int tap_and_drag = 1;
+static const int tap_to_click = 0;
+static const int tap_and_drag = 0;
 static const int drag_lock = 1;
 static const int natural_scrolling = 0;
 static const int disable_while_typing = 1;
@@ -102,23 +102,31 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
-/* commands */
-static const char *termcmd[] = { "foot", NULL };
-static const char *menucmd[] = { "bemenu-run", NULL };
-static const char *browser[] = { "librewolf", NULL };
+/* Programs */
+#define MENU      "bemenu-run"
+#define BROWSER   "librewolf"
+#define TERMINAL  "foot" 
+#define SH        "sh"
+#define SYSMON    "htop"
+#define WPSH	  "wp.sh"
+#define FMTUI	  "vifm"
+#define TXT	  "nvim"
+#define AUDIOTUI "mixertui"
 
-#define terminal "foot" 
 
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
 	/* modifier                  key                 function        argument */
-	{ MODKEY,                    XKB_KEY_p,          spawn,          {.v = menucmd} },
-	{ MODKEY,                    XKB_KEY_space,      spawn,          {.v = termcmd} },
-	{ MODKEY,		     XKB_KEY_b,		 spawn,		 {.v = browser} },
-	{ MODKEY,		     XKB_KEY_f,		 spawn,		 {.v = (const char*[]) { terminal, "vifm", NULL } } },
-	{ MODKEY,		     XKB_KEY_m,		 spawn,		 {.v = (const char*[]) { terminal, "htop", NULL } } },
-	{ MODKEY,		     XKB_KEY_v,		 spawn,		 {.v = (const char*[]) { terminal, "vim",  NULL } } },
-	{ MODKEY,		     XKB_KEY_a,		 spawn,		 {.v = (const char*[]) { terminal, "mixertui", NULL } } }, 
+	{ MODKEY,                    XKB_KEY_p,          spawn,          {.v = (const char*[]) { MENU,		     NULL}}},
+	{ MODKEY,		     XKB_KEY_b,		 spawn,		 {.v = (const char*[]) { BROWSER,            NULL}}}, 
+	{ MODKEY,		     XKB_KEY_w,		 spawn,		 {.v = (const char*[]) { SH,       WPSH,     NULL}}},
+	{ MODKEY,		     XKB_KEY_space,	 spawn,		 {.v = (const char*[]) { TERMINAL,           NULL}}},
+	{ MODKEY,		     XKB_KEY_f,		 spawn,		 {.v = (const char*[]) { TERMINAL, FMTUI,    NULL}}},
+	{ MODKEY,		     XKB_KEY_m,		 spawn,		 {.v = (const char*[]) { TERMINAL, SYSMON,   NULL}}},
+	{ MODKEY,		     XKB_KEY_v,		 spawn,		 {.v = (const char*[]) { TERMINAL, TXT,      NULL}}},
+	{ MODKEY,		     XKB_KEY_a,		 spawn,		 {.v = (const char*[]) { TERMINAL, AUDIOTUI, NULL}}}, 
+	/* Below are 'under the hood' commands */
+	{ MODKEY,		     XKB_KEY_Return,	 togglefloating, {0} }, 
 	{ MODKEY,                    XKB_KEY_j,          focusstack,     {.i = +1} },
 	{ MODKEY,                    XKB_KEY_k,          focusstack,     {.i = -1} },
 	{ MODKEY,                    XKB_KEY_i,          incnmaster,     {.i = +1} },
