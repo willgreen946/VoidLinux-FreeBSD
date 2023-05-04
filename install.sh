@@ -42,6 +42,7 @@ cp -r .fonts /home/$username/.fonts
 cp .xinitrc /home/$username/.xinitrc
 cp .zshrc /home/$username/.zshrc
 cp bat.sh /home/$username/bat.sh
+cp wp.sh /home/$username/wp.sh
 cp waystart.sh /home/$username/waystart.sh
 
 if [ "$OS" = "BSD" ]; then
