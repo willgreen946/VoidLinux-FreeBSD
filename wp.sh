@@ -1,1 +1,1 @@
-exec swaybg -i Wallpapers/f.png -m fill
+exec swaybg -i Wallpapers/f.svg -m fill
