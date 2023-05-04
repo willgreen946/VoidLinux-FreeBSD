@@ -1,0 +1,51 @@
+body {
+	background-color: #282828;
+	color: #ffffff;
+	font-family: ubuntu;	
+	font-size: 14px;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+h1, h2, h4, h5, h6, p {
+	background-color: transparent;
+	color: #ffffff;
+	font-family: ubuntu;
+	text-align: center;
+}
+
+h3	{
+	background-color: transparent;
+	color: #ffffff;
+	font-family: ubuntu;
+	text-align: left;
+}
+
+a {
+	/*background-color: #175f1c;*/
+	color: #ffffff;
+	font-family: ubuntu;
+	font-size: 14px;
+	font-weight: bold;
+	/*border: #175f1c;		
+	border-radius: 2px;
+	padding: 4px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 10%;*/
+}
+
+a:hover {
+	background-color: #175f1c;
+	color: #f0f0f0;
+	font-size: 16px;
+}
+
+li {
+	text-align: center;
+	padding: 5px;
+	display: flex;
+}
