@@ -1,20 +1,24 @@
-source /home/will/.vim/colors/firewatch.vim
 set bg=dark
+syntax on
+set t_Co=256
+colorscheme avt
 autocmd VimEnter * hi Normal ctermbg=none
 "let g:gruvbox_contrast_dark = hard
-syntax on
 set number
 set cursorline!
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0 
-"plugin 'vim-airline/vim-airline'
-" Highlighting line
-" hi CursorLine cterm=NONE ctermbg=green
-" hi CursorColumn cterm=NONE ctermbg=green
-" hi CursorLine cterm=NONE ctermbg=240
 hi CursorColumn cterm=NONE ctermbg=240
 hi Directory ctermfg=green
 
-let g:airline#extensions#tabline#enabled = 1
+if has("termguicolors")
+  set termguicolors
+  if &t_8f == ''
+    " The first characters after the equals sign are literal escape characters.
+    set t_8f=[38;2;%lu;%lu;%lum
+    set t_8b=[48;2;%lu;%lu;%lum
+  endif
+endif
+
+"let g:airline#extensions#tabline#enabled = 1
 
 " Lightline
 set laststatus=2
@@ -23,14 +27,8 @@ let g:lightline = {
 	\ 'colorscheme' : '16color',
 	\ }
 
-" Mapping various keys
-" Ctrl+e to get to end of the line
-" map <C-e> $ <right> 
 nnoremap <C-e> <End> 
 inoremap <C-e> <End>
-" Ctrl+f to open vifm 
-"map <C-f> :vifm <CR>
-"map <C-v> :Vsplit Vifm <CR>
 
 " Nerdtree
 "autocmd VimEnter * NERDTree
@@ -38,10 +36,7 @@ map <C-n> :NERDTreeToggle <CR>
 map <C-j> :NERDTreeOpen<CR>
 nnoremap <C-f> :NERDTreeToggle<Enter>
 
-" Ctrl-a to make green line
-" Ctrl-z to make green vertical line
 map <C-a> :set cursorline! <CR> 
-map <C-z> :set cursorcolumn! <CR>
 
 " Disabling arrow keys
 cnoremap <Down> <Nop>
