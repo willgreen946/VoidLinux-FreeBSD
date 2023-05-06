@@ -108,7 +108,6 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 #define TERMINAL  "foot" 
 #define SH        "sh"
 #define SYSMON    "htop"
-#define WPSH	  "wp.sh"
 #define FMTUI	  "vifm"
 #define TXT	  "nvim"
 #define AUDIOTUI "mixertui"
@@ -119,7 +118,6 @@ static const Key keys[] = {
 	/* modifier                  key                 function        argument */
 	{ MODKEY,                    XKB_KEY_p,          spawn,          {.v = (const char*[]) { MENU,		     NULL}}},
 	{ MODKEY,		     XKB_KEY_b,		 spawn,		 {.v = (const char*[]) { BROWSER,            NULL}}}, 
-	{ MODKEY,		     XKB_KEY_w,		 spawn,		 {.v = (const char*[]) { SH,       WPSH,     NULL}}},
 	{ MODKEY,		     XKB_KEY_space,	 spawn,		 {.v = (const char*[]) { TERMINAL,           NULL}}},
 	{ MODKEY,		     XKB_KEY_f,		 spawn,		 {.v = (const char*[]) { TERMINAL, FMTUI,    NULL}}},
 	{ MODKEY,		     XKB_KEY_m,		 spawn,		 {.v = (const char*[]) { TERMINAL, SYSMON,   NULL}}},
