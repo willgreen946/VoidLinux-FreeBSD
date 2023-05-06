@@ -10,15 +10,15 @@ constexpr int paddingX = 8;
 constexpr int paddingY = 1;
 
 // See https://docs.gtk.org/Pango/type_func.FontDescription.from_string.html
-constexpr const char* font = "terminus 10";
+constexpr const char* font = "ubuntu 10";
 
 constexpr ColorScheme colorInactive = {Color(0xff, 0xff, 0xff), Color(0x33, 0x33, 0x33)};
 constexpr ColorScheme colorActive = {Color(0xff, 0xff, 0xff), Color(0xab, 0x2b, 0x28)};
 constexpr const char* termcmd[] = {"foot", nullptr};
 
 static std::vector<std::string> tagNames = {
-	 "1", "2", "3",
-         "4", "5", "6",
+	 "", "", "",
+         "", "", "",
 };
 
 constexpr Button buttons[] = {
