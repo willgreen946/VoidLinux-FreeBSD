@@ -9,7 +9,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="apple"
-ZSH_THEME="gruvbox"
+ZSH_THEME="darkblood"
 
 PROMPT="%t"
 
@@ -102,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias wifi="doas wpa_cli"
 alias fi="doas pkg install"
 alias fr="doas pkg remove"
 alias vi="sudo xbps-install"
