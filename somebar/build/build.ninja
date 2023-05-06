@@ -34,7 +34,7 @@ rule CUSTOM_COMMAND
  restat = 1
 
 rule REGENERATE_BUILD
- command = /usr/local/bin/meson --internal regenerate /usr/home/will/github/somebar /usr/home/will/github/somebar/build
+ command = /usr/local/bin/meson --internal regenerate /usr/home/will/github/Voidlinux-FreeBSD/somebar /usr/home/will/github/Voidlinux-FreeBSD/somebar/build
  description = Regenerating build files.
  generator = 1
 
@@ -138,7 +138,7 @@ build meson-internal__dist: CUSTOM_COMMAND PHONY
 build ctags: phony meson-internal__ctags
 
 build meson-internal__ctags: CUSTOM_COMMAND PHONY
- COMMAND = /usr/local/bin/meson --internal tags ctags /usr/home/will/github/somebar
+ COMMAND = /usr/local/bin/meson --internal tags ctags /usr/home/will/github/Voidlinux-FreeBSD/somebar
  pool = console
 
 build uninstall: phony meson-internal__uninstall
