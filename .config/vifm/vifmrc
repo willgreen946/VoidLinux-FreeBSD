@@ -1,7 +1,7 @@
 " Editor to neovim
-set vicmd=vim
+set vicmd=nvim
 " Colorscheme
-colorscheme gruvbox 
+colorscheme wrt 
 " View pane
 view
 " Normal mode commands
